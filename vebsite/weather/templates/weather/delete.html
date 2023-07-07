@@ -1,0 +1,14 @@
+{%extends 'main/base.html'%}
+{%block title%} Удалить город {%endblock%}
+{%block content%}
+ <div class="col-8 offset-3">
+      <h1>Вы действительно хотите удалить информацию о городе {{models.name}}?</h1>
+ </div>
+
+
+<form action="" method="post">
+       {%csrf_token%}
+    <input type='submit' name="send"value="Да,удалить" class="col-3 offset-4 mt-5 btn btn-danger">
+</form>
+
+{%endblock%}
